@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.prova.bugad.aurascalc2.AddAura">
+
+    <TextView
+        android:id="@+id/lblAuraNameE"
+        android:text="Aura name:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/edtAuraNameE"
+        android:layout_below="@+id/lblAuraNameE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <CheckBox
+        android:layout_below="@+id/edtAuraNameE"
+        android:id="@+id/ckBonusE"
+        android:text="Does it buff the creature?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:weightSum="2"
+        android:id="@+id/llBonusE"
+        android:layout_below="@+id/ckBonusE"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:textAlignment="center"
+            android:inputType="numberDecimal|numberSigned"
+            android:id="@+id/edtBuffAttackE"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="/"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:textAlignment="center"
+            android:inputType="numberDecimal|numberSigned"
+            android:id="@+id/edtBuffDefenseE"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llEffectsE"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/llBonusE"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_weight="1"
+            android:weightSum="6"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:text="Flying"
+                android:id="@+id/ckFlyingE"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <CheckBox
+                android:id="@+id/ckLifeLinkE"
+                android:text="Lifelink"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <CheckBox
+                android:id="@+id/ckLifeLinkFakeE"
+                android:text="Fake Lifelink"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <CheckBox
+                android:id="@+id/ckFirstStrikeE"
+                android:text="First Strike"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <CheckBox
+                android:id="@+id/ckTrampleE"
+                android:text="Trample"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <CheckBox
+                android:id="@+id/ckUmbraE"
+                android:text="Is it a umbra?"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:weightSum="6"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/ckVigilanceE"
+                android:text="Vigilance"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <CheckBox
+                android:id="@+id/ckReachE"
+                android:text="Reach"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <CheckBox
+                android:id="@+id/ckProtectE"
+                android:text="Protection from Creatures"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <CheckBox
+                android:id="@+id/ckFichaE"
+                android:text="Create 1/1 Warrior"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <CheckBox
+                android:text="Draw a card"
+                android:id="@+id/ckHitE"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <CheckBox
+                android:id="@+id/ckEtheralE"
+                android:text="Ethereal?"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnOKNewAuraE"
+        android:text="Save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/auras"
+    android:layout_width="match_parent"
+    android:layout_height="65dp">
+
+    <LinearLayout
+        android:weightSum="4"
+        android:id="@+id/llNames"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="center"
+            android:padding="10dp"
+            android:id="@+id/lblAuraNameSpinner"
+            android:text="Aura name"
+            android:layout_width="0dp"
+            android:layout_weight="1.50"
+            android:layout_height="wrap_content" />
+        <Button
+            android:gravity="center"
+            android:padding="10dp"
+            android:id="@+id/btnAuraSub"
+            android:text="-"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/lblAuraQT"
+            android:padding="10dp"
+            android:text="0"
+            android:layout_width="0dp"
+            android:layout_weight="0.50"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:gravity="center"
+            android:padding="10dp"
+            android:id="@+id/btnAuraAdd"
+            android:text="+"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.prova.bugad.aurascalc2.MainActivity">
+
+    <TextView
+        android:id="@+id/lblCreaturePower"
+        android:layout_centerHorizontal="true"
+        android:text="1/1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:id="@+id/rbgCreature"
+        android:layout_below="@+id/lblCreaturePower"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:text="Gladecover Boogle"
+            android:id="@+id/rbGladeBoogles"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:text="Silhana Ledgewalker"
+            android:id="@+id/rbSilhana"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:text="Kor Spiritdancer"
+            android:id="@+id/rbKor"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_below="@id/rbgCreature"
+        android:text="M A D skills"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/lblHabilidades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/center_point"
+        android:orientation="vertical"
+        android:layout_below="@+id/lblHabilidades"
+        android:weightSum="4"
+        android:id="@+id/llSkills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:text="Flying"
+            android:id="@+id/ckFlyingM"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <CheckBox
+            android:text="LifeLink"
+            android:id="@+id/ckLifeLinkM"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <CheckBox
+            android:text="First Strike"
+            android:id="@+id/ckFirstStrikeM"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <CheckBox
+            android:text="Trample"
+            android:id="@+id/ckTrampleM"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/center_point"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"/>
+
+
+    <LinearLayout
+        android:layout_alignStart="@+id/center_point"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:layout_below="@+id/lblHabilidades"
+        android:layout_toEndOf="@+id/llSkills"
+        android:weightSum="4"
+        android:id="@+id/llSkills2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:text="Vigilance"
+            android:id="@+id/ckVigilanceM"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <CheckBox
+            android:text="Reach"
+            android:id="@+id/ckReachM"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <CheckBox
+            android:text="Protection From Creatures"
+            android:id="@+id/ckProtectM"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <CheckBox
+            android:text="Created 1/1 Warrior"
+            android:id="@+id/ckFichaM"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTotem"
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@+id/llSkills2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:text="Totem Armor"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:text="Definitely not LifeLink"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:text="Life Gain By Att."
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lblTotemArmor"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:text="0"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/lblFakeLifelink"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:text="0"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/lblLifeGain"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:text="0"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:visibility="gone"
+        android:layout_below="@+id/llTotem"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/lvAurasPickers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lvAurasPickersRecicle"
+        android:layout_below="@+id/llTotem"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <CheckBox
+        android:id="@+id/ckHitM"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
