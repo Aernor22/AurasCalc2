@@ -1,12 +1,16 @@
 package com.prova.bugad.aurascalc2;
 
+import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -132,6 +136,8 @@ public class CustomAdapterRecycler extends RecyclerView.Adapter<CustomAdapterRec
         holder.lifelink = this.lifelink;
         holder.creatureType = this.creatureType;
         final TextView lblAuraQt = holder.lblAuraQt;
+
+
 
         holder.btnAuraAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -263,13 +269,15 @@ public class CustomAdapterRecycler extends RecyclerView.Adapter<CustomAdapterRec
         }
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener{
         TextView lblAuraName;
         TextView lblAuraQt;
         TextView lblPowerDefense;
 
         TextView totemArmor;
         TextView fakeLife;
+
+        LinearLayout llAura;
 
         ArrayList<AuraQuantity> activeAuras;
         CheckBox[] currentEffects;
@@ -289,8 +297,21 @@ public class CustomAdapterRecycler extends RecyclerView.Adapter<CustomAdapterRec
             btnAuraAdd = (Button)itemView.findViewById(R.id.btnAuraAdd);
             btnAuraSub = (Button)itemView.findViewById(R.id.btnAuraSub);
             lblAuraQt = (TextView)itemView.findViewById(R.id.lblAuraQT);
+            llAura = (LinearLayout)itemView.findViewById(R.id.llNames);
+            itemView.setOnCreateContextMenuListener(this);
+
         }
 
         public int getItem() {return auraList.indexOf(aura);}
+
+        @Override
+        public void onCreateContextMenu(ContextMenu menu, View v,
+                                        ContextMenu.ContextMenuInfo menuInfo) {
+
+            PopupMenu pm = new PopupMenu(v.getContext(),v);
+            MenuInflater inflater = pm.getMenuInflater();
+            inflater.inflate(R.menu.context_menu, menu);
+
+        }
     }
 }
